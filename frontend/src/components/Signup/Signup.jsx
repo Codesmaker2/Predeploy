@@ -7,6 +7,7 @@ import { server } from "../../server";
 import { toast } from "react-toastify";
 import { BiCamera } from "react-icons/bi";
 import { IoPersonCircle } from "react-icons/io5";
+import { BsArrowBarLeft } from "react-icons/bs";
 
 const Singup = () => {
   const [email, setEmail] = useState("");
