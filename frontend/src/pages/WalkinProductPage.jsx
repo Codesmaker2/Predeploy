@@ -46,7 +46,7 @@ const ProductsPage = () => {
       <div>
       {/* <Header activeHeading={3} /> */}
       <Link to={"/dashboard"}>
-      <RxPinLeft size={30} className="m-2 hover:text-blue-500"/>  
+      <div className="max-400px:hidden 400px:hidden"><RxPinLeft size={30} className="m-2 hover:text-blue-500"/></div>  
       </Link>
       <div className="flex bg-blue-500 h-[70px] items-center justify-end ">
             {/* <div className={`${styles.noramlFlex} `}>
