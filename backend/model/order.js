@@ -16,7 +16,7 @@ const orderSchema = new mongoose.Schema({
     },
     penName:{
         type: String,
-        required: true,
+        
         
     },
     totalPrice:{
