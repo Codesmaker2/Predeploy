@@ -421,7 +421,7 @@ const Singup = () => {
                 htmlFor="facebook"
                 className="block text-sm font-medium text-gray-700"
               >
-                Facebook Profile Link (optional)
+                Facebook Profile Link 
               </label>
               <div className="mt-1">
                 <input
@@ -429,7 +429,7 @@ const Singup = () => {
                   placeholder="Copy your Facebook Profile link..."
                   name="facebook"
                   autoComplete="facebook"
-                  // required
+                  required
                   value={facebooklink}
                   onChange={(e) => setFacebooklink(e.target.value)}
                   className="h-9 appearance-none block w-full px-3 py-2 border border-gray-500 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
