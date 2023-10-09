@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { server } from "../../server";
 import { toast } from "react-toastify";
+import { BsArrowBarLeft } from "react-icons/bs";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -52,6 +53,9 @@ const Login = () => {
         <div className=" bg-white py-4 px-4 shadow shadow-gray-400 sm:rounded-lg sm:px-10 max-400px:m-2  max-500px:m-10  max-640px:m-10 max-400px:rounded-[20px]">
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="  items-center justify-center">
+                <Link to={"/"}>
+        <div className="text-blue-500"><BsArrowBarLeft size={20}/></div>
+        </Link>
               <div className="flex  justify-center">
                 <img
                   src="https://i.ibb.co/ZVVMVrH/Lcd5nd-Bri-removebg-preview.png"
