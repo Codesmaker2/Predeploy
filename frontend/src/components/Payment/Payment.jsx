@@ -257,7 +257,7 @@ const Payment = () => {
   };
 
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-center ">
       <div className="w-[90%] 1000px:w-[70%] block 800px:flex">
         <div className="w-full 800px:w-[65%]">
           <PaymentInfo
@@ -526,7 +526,7 @@ const PaymentInfo = ({
       </div>
 
 {/*FOR WALKIN ADVANCE PAYMENT*/}
-<div>
+<div className="400px:hidden 800px:flex">
         <div className="flex w-full pb-5 border-b mb-2 max-400px:hidden">
           <div
             className="w-[25px] h-[25px] rounded-full bg-transparent border-[3px] border-[#1d1a1ab4] relative flex items-center justify-center"
@@ -558,7 +558,7 @@ const PaymentInfo = ({
 
 
       {/*FOR WALKIN CASH ON DELIVERY*/}
-<div>
+<div className="400px:hidden 800px:flex">
         <div className="flex w-full pb-5 border-b mb-2  max-400px:hidden">
           <div
             className="w-[25px] h-[25px] rounded-full bg-transparent border-[3px] border-[#1d1a1ab4] relative flex items-center justify-center"
