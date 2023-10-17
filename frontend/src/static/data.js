@@ -151,7 +151,7 @@ export const categoriesData = [
   },
   {
     id: 4,
-    title: "6.6 Liters Botle water own brand and other sizes",
+    title: "Liters Botle water own brand and other sizes",
     subTitle: "",
     image_Url:
       "https://www.tradeindia.com/_next/image/?url=https%3A%2F%2Ftiimg.tistatic.com%2Ffp%2F3%2F007%2F635%2Fnatural-and-rich-in-magnesium-fresh-mineral-hygine-drinking-water-bottle-032.jpg&w=750&q=75",
@@ -165,7 +165,7 @@ export const categoriesData = [
   },
   {
     id: 5,
-    title: "Accessories for Gallon | Container parts",
+    title: "Accessories for Gallon | Container",
     subTitle: "",
     image_Url:
       "https://laz-img-sg.alicdn.com/p/90625c8f09a113ee91c91b89dd73ea80.jpg",
