@@ -416,10 +416,9 @@ hideProgressBar
 newestOnTop={false}
 closeOnClick
 rtl={false}
-pauseOnFocusLoss
-draggable
+pauseOnFocusLoss={false}
+draggable={false}
 pauseOnHover={false}
-transition={"flip"}
 theme="light"
 />
     </BrowserRouter>
