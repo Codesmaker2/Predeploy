@@ -420,7 +420,7 @@ pauseOnFocusLoss
 draggable
 pauseOnHover={false}
 transition={"flip"}
-theme="transparent"
+theme="light"
 />
     </BrowserRouter>
   );
