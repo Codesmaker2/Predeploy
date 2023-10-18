@@ -63,7 +63,7 @@ import {
   AdminDashboardWithdraw
 } from "./routes/AdminRoutes";
 import { ToastContainer } from "react-toastify";
-import { Flip} from "react-toastify";
+import {Slide} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Store from "./redux/store";
 import { loadSeller, loadUser } from "./redux/actions/user";
@@ -420,8 +420,10 @@ rtl={false}
 pauseOnFocusLoss={false}
 draggable={false}
 pauseOnHover={false}
-transition={Flip}
+transition={Slide}
 theme="light"
+className="text-blue-500 text-center w-10 flex justify-end "
+style={{ width: "550px", justifyContent: "center", textAlign: "center"}}
 />
     </BrowserRouter>
   );
