@@ -63,6 +63,7 @@ import {
   AdminDashboardWithdraw
 } from "./routes/AdminRoutes";
 import { ToastContainer } from "react-toastify";
+import { Flip} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Store from "./redux/store";
 import { loadSeller, loadUser } from "./redux/actions/user";
