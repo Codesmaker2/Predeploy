@@ -56,7 +56,7 @@ const { seller } = useSelector((state) => state.seller);
       } else {
         const cartData = { ...data, qty: 1 };
         dispatch(addTocart(cartData));
-        toast.success("Item added to cart successfully!");
+        toast.success("Item added to cart 🛒");
       }
     }
   };
