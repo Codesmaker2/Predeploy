@@ -423,7 +423,7 @@ pauseOnHover={false}
 transition={Slide}
 theme="light"
 className="text-blue-500 text-center w-10 flex justify-end "
-style={{ width: "550px", justifyContent: "center", textAlign: "center"}}
+style={{ justifyContent: "center", textAlign: "center"}}
 />
     </BrowserRouter>
   );
