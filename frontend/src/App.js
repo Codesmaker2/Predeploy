@@ -408,7 +408,7 @@ const App = () => {
           }
         />
       </Routes>
-     <ToastContainer
+    <ToastContainer
 position="top-center"
 autoClose={1000}
 limit={1}
@@ -419,6 +419,7 @@ rtl={false}
 pauseOnFocusLoss={false}
 draggable={false}
 pauseOnHover={false}
+transition={Flip}
 theme="light"
 />
     </BrowserRouter>
