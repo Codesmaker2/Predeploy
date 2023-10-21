@@ -61,16 +61,20 @@ const HomePage = () => {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-    <div className='mb-5 overflow-hidden 800px:hidden'
+    <div className='relative mb-5 overflow-hidden 800px:hidden'
     
      >
        <Header activeHeading={1} />
 
-      {isRefreshing && (
-        <div className="h-screen flex flex-col items-center justify-center animate-spin">
-          <AiOutlineReload className="w-8 h-8" color='blue' />
+     
+     {isRefreshing && (
+        <div className="absolute top-0 left-0 w-full h-20 flex items-center justify-center">
+        <div className="animate-spin">
+          <AiOutlineReload className="w-8 h-8 " color='blue' />
         </div>
+      </div>
       )}
+     
         {!isRefreshing && <p></p>}
       
        
