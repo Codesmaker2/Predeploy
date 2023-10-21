@@ -294,8 +294,9 @@ const Header = ({ activeHeading }) => {
       
       <div
         className={`${
-          active === true ? " shadow-sm top-0 left-0 z-10" : null
-        } fixed transition w-full h-[70px] bg-blue-800 z-50 top-0 left-0 shadow-sm 800px:hidden`}
+          active === true ? "shadow-sm fixed top-0 left-0 z-10" : null
+        }
+      w-full h-[70px] bg-blue-800 z-50 top-0 left-0 shadow-sm 800px:hidden`}
       >
         <div className="w-full flex items-center justify-between">
           <div>
