@@ -14,26 +14,71 @@ import {  BiMessageDots, BiUser} from 'react-icons/bi';
 import { useSelector } from 'react-redux';
 import Cart from '../components/cart/Cart';
 import { Link } from 'react-router-dom';
+import { AiOutlineReload } from 'react-icons/ai';
 
 // import Navigation from "./components/Navigation.jsx";
 
 
 const HomePage = () => {
+  const [isRefreshing, setRefreshing] = useState(false);
+  const [startY, setStartY] = useState(0);
+
+  const handleTouchStart = (e) => {
+    setStartY(e.touches[0].clientY);
+  };
+
+  const handleTouchMove = (e) => {
+    const currentY = e.touches[0].clientY;
+
+    if (currentY - startY > 50) {
+      window.location.reload()
+      setRefreshing(true);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (isRefreshing) {
+      
+
+      // Simulate an asynchronous operation (e.g., fetching data from an API)
+      setTimeout(() => {
+        setRefreshing(false);
+      }, 1000);
+    }
+  };
+
   const [openCart, setOpenCart] = useState(false);
   const { cart } = useSelector((state) => state.cart);
   
-  const refreshPage = () => {
-    window.location.reload();
-  };
+  // const refreshPage = () => {
+  //   window.location.reload();
+  // };
   return (
     <>
-    <div className='mb-5 overflow-hidden 800px:hidden'>
+     <div
       
-        <Header activeHeading={1} />
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
+    <div className='mb-5 overflow-hidden 800px:hidden'
+    
+     >
+       <Header activeHeading={1} />
 
+      {isRefreshing && (
+        <div className="h-screen flex flex-col items-center justify-center animate-spin">
+          <AiOutlineReload className="w-8 h-8" color='blue' />
+        </div>
+      )}
+        {!isRefreshing && <p></p>}
+      
+       
          {/* <Hero /> */}
 
+        <div className='bg-white'>
         <Categories /> 
+        </div>
         <BestDeals /> 
         {/* <div className="fixed left-0 z-10  justify-center items-center ">
         <Navigation />
@@ -49,7 +94,7 @@ const HomePage = () => {
             <div className="flex grid-flow-col-5 justify-between w-full">
              <Link to={"/profile"}><BiUser size={25} className='m-4 rounded-t-lg rounded-b-none'/></Link>
              <Link to={"/inbox"}><BiMessageDots size={25} className='m-4'/></Link>
-             <Link to={"/"}><MdHome size={35}  className='m-2 border rounded-full shadow text-blue-500 shadow-gray-500 ' onClick={refreshPage}/></Link>
+             <Link to={"/"}><MdHome size={35}  className='m-2 border rounded-full shadow text-blue-500 shadow-gray-500 ' /></Link>
              <Link to={"/user-orders"}><HiOutlineShoppingBag size={25} className='m-4'/></Link>
              <div>
             <div
@@ -72,6 +117,7 @@ const HomePage = () => {
           
         </div>
       </div>
+    </div>
     </div>
     </div>
     </>
