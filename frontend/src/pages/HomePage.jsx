@@ -13,25 +13,27 @@ import { HiOutlineShoppingBag } from 'react-icons/hi';
 import {  BiMessageDots, BiUser} from 'react-icons/bi';
 import { useSelector } from 'react-redux';
 import Cart from '../components/cart/Cart';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AiOutlineReload } from 'react-icons/ai';
 
-// import Navigation from "./components/Navigation.jsx";
 
 
 const HomePage = () => {
+
   const [isRefreshing, setRefreshing] = useState(false);
   const [startY, setStartY] = useState(0);
+  const navigate = useNavigate();
 
   const handleTouchStart = (e) => {
     setStartY(e.touches[0].clientY);
+    
   };
 
   const handleTouchMove = (e) => {
     const currentY = e.touches[0].clientY;
 
     if (currentY - startY > 50) {
-      window.location.reload()
+      // window.location.reload()
       setRefreshing(true);
     }
   };
@@ -43,6 +45,8 @@ const HomePage = () => {
       // Simulate an asynchronous operation (e.g., fetching data from an API)
       setTimeout(() => {
         setRefreshing(false);
+        navigate("/");
+       
       }, 1000);
     }
   };
@@ -65,12 +69,15 @@ const HomePage = () => {
     
      >
        <Header activeHeading={1} />
+       <div className='bg-white'>
+        <Categories /> 
+        </div>
 
      
      {isRefreshing && (
-        <div className="absolute top-0 left-0 w-full h-20 flex items-center justify-center">
+        <div className="absolute top-[50px] left-0  w-full h-20 flex items-center justify-center">
         <div className="animate-spin">
-          <AiOutlineReload className="w-8 h-8 " color='blue' />
+          <AiOutlineReload className="w-8 h-8" color='blue' />
         </div>
       </div>
       )}
@@ -80,9 +87,7 @@ const HomePage = () => {
        
          {/* <Hero /> */}
 
-        <div className='bg-white'>
-        <Categories /> 
-        </div>
+      
         <BestDeals /> 
         {/* <div className="fixed left-0 z-10  justify-center items-center ">
         <Navigation />
