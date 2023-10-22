@@ -6,6 +6,7 @@ import Header from "../components/Layout/Header";
 import Loader from "../components/Layout/Loader";
 import ProductCard from "../components/Route/ProductCard/ProductCard";
 import styles from "../styles/styles";
+import NavButton from "../components/Route/Hero/NavButton";
 
 const ProductsPage = () => {
   const [searchParams] = useSearchParams();
@@ -35,6 +36,7 @@ const ProductsPage = () => {
       <Header activeHeading={3} />
       <br />
       <br />
+      <br />
       <div className={`${styles.section}`}>
         <div className="grid grid-cols-2 gap-[10px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-4 lg:gap-[25px] xl:grid-cols-5 xl:gap-[30px] mb-12">
           {data && data.map((i, index) => <ProductCard data={i} key={index} />)}
@@ -45,6 +47,7 @@ const ProductsPage = () => {
           </h1>
         ) : null}
       </div>
+      <NavButton/>
      
       <Footer />
     </div>
