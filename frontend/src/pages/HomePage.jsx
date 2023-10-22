@@ -64,6 +64,8 @@ const HomePage = () => {
             <Header activeHeading={1} />
             <br />
             <br />
+            <br />
+            
             <div
               className="bg-white"
               onTouchStart={handleTouchStart}
@@ -85,8 +87,7 @@ const HomePage = () => {
             )}
 
             {/* <Hero /> */}
-                <br />
-                <br />
+              
             <BestDeals />
             <Events />
             
