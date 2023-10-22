@@ -42,12 +42,13 @@ const HomePage = () => {
 
   const handleTouchEnd = () => {
     if (isRefreshing) {
+      window.location.reload()
       
 
       // Simulate an asynchronous operation (e.g., fetching data from an API)
       setTimeout(() => {
         setRefreshing(false);
-        window.location.reload()
+        
 
       }, 1000);
     }
