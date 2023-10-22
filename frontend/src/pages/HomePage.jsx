@@ -7,13 +7,7 @@ import FeaturedProduct from "../components/Route/FeaturedProduct/FeaturedProduct
 import Events from "../components/Events/Events";
 import Sponsored from "../components/Route/Sponsored";
 import Footer from "../components/Layout/Footer";
-import { MdHome } from "react-icons/md";
-import { CgShoppingCart } from "react-icons/cg";
-import { HiOutlineShoppingBag } from "react-icons/hi";
-import { BiMessageDots, BiUser } from "react-icons/bi";
 import { useSelector } from "react-redux";
-import Cart from "../components/cart/Cart";
-import { Link } from "react-router-dom";
 import { AiOutlineReload } from "react-icons/ai";
 import Loader from "../components/Layout/Loader";
 import Sliders from "../components/Route/Categories/Slider";
@@ -48,24 +42,24 @@ const HomePage = () => {
     }
   };
 
-  const [openCart, setOpenCart] = useState(false);
-  const { cart } = useSelector((state) => state.cart);
-
+  
   // const refreshPage = () => {
   //   window.location.reload();
   // };
   return (
     <>
+    <div className=" !overflow-scroll">
+
+    
       {isLoading ? (
         <Loader />
       ) : (
-        <div>
-          <div className="relative mb-5 overflow-hidden 800px:hidden">
+        <div className=" ">
+          <div className=" mb-5 !overflow-scroll h-[100vh] w-full 800px:hidden">
             <Header activeHeading={1} />
             <br />
             <br />
             <br />
-            
             <div
               className="bg-white"
               onTouchStart={handleTouchStart}
@@ -99,6 +93,7 @@ const HomePage = () => {
           <NavButton/>
         </div>
       )}
+      </div>
     </>
   );
 };
