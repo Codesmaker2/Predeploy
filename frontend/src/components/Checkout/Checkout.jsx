@@ -15,6 +15,7 @@ import { BsHouseFill, BsTruck } from "react-icons/bs";
 import { HiLocationMarker } from "react-icons/hi";
 import { RiCoupon2Fill } from "react-icons/ri";
 import { BiHomeAlt, BiPen } from "react-icons/bi";
+import NavButton from "../Route/Hero/NavButton";
 
 const Checkout = () => {
   const { user } = useSelector((state) => state.user);
@@ -36,7 +37,7 @@ const Checkout = () => {
   }, []);
 
   const paymentSubmit = () => {
-   if(address === "" || landmark === "" || penname === ""){
+   if(address === "" || landmark === ""){
       toast.error("Please Provide complete address!")
    } else{
     const shippingAddress = {
@@ -114,7 +115,7 @@ const Checkout = () => {
   console.log(discountPercentenge);
 
   return (
-    <div className="w-full flex flex-col items-center py-8">
+    <div className="w-full flex flex-col items-center bg-white !overflow-scroll h-[100vh]">
       <div className="w-[90%] 1000px:w-[70%] block 800px:flex">
         <div className="w-full 800px:w-[65%]">
           <ShippingInfo
@@ -151,8 +152,9 @@ const Checkout = () => {
         className={`${styles.button} max-400px:w-[250px] 400px:w-[250px] 800px:w-[240px] mt-10`}
         onClick={paymentSubmit}
       >
-       <h5 className="text-white max-400px:text-[15px] ">Proceed to Payment Method</h5> <AiOutlineArrowRight className="text-white text-[20px]"/>
+       <h5 className="text-white max-400px:text-[15px] py-10 ">Proceed to Payment Method</h5> <AiOutlineArrowRight className="text-white text-[20px]"/>
       </div>
+      <NavButton/>
     </div>
   );
 };
