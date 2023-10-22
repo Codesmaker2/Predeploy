@@ -28,7 +28,7 @@ const HomePage = () => {
 
   const handleTouchStart = (e) => {
     setStartY(e.touches[0].clientY);
-    window.location.reload()
+   
 
   };
 
@@ -37,6 +37,7 @@ const HomePage = () => {
     const currentY = e.touches[0].clientY;
 
     if (currentY - startY > 50) {
+      window.location.reload()
        
       setRefreshing(true);
     }
