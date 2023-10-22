@@ -8,11 +8,12 @@ import { Link } from 'react-router-dom';
 const CheckoutSteps = ({active}) => {
     console.log(active);
   return (
-    <div className='w-full flex justify-center '>
+    <div className='w-full flex items-center justify-center  pt-10 pb-5 bg-white '>
+      
         <Link to={"/checkout"}>
             <RxCaretLeft color={`${active === 1 ? "gray" : "blue"}`} size={40} className='cursor-pointer'/></Link>
         
-        <div className="w-[90%] 800px:w-[50%]  400px:w-[75%] flex items-center flex-wrap ">
+        <div className="w-[90%] 800px:w-[50%] 400px:w-[75%] flex items-center flex-wrap ">
                <div className={`${styles.noramlFlex} `}>
                 <div className={`${styles.cart_button} `}>
                        <IoBicycleOutline className='text-white text-[40px] max-400px:text-[30px]'/><span className={`${styles.cart_button_text}`}><h3 className='hidden sm:block'>(1)Delivery Address</h3></span>
