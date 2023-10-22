@@ -16,6 +16,7 @@ import Cart from '../components/cart/Cart';
 import { Link, useNavigate } from 'react-router-dom';
 import { AiOutlineReload } from 'react-icons/ai';
 import Loader from "../components/Layout/Loader";
+import Sliders from "../components/Route/Categories/Slider";
 
 
 
@@ -72,15 +73,20 @@ const HomePage = () => {
     
      >
        <Header activeHeading={1} />
+      
        <div className='bg-white'
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
        >
+       <Sliders/>
+       </div>
+       <div className='bg-white'>
+        
         <Categories /> 
         </div>
-
      
+
      {isRefreshing && (
       
       
@@ -113,11 +119,7 @@ const HomePage = () => {
             <div className="flex grid-flow-col-5 justify-between w-full">
              <Link to={"/profile"}><BiUser size={25} className='m-4 rounded-t-lg rounded-b-none'/></Link>
              <Link to={"/inbox"}><BiMessageDots size={25} className='m-4'/></Link>
-             <Link to={"/"}><MdHome size={35}  className='m-2 border rounded-full shadow text-blue-500 shadow-gray-500 ' 
-              onTouchStart={handleTouchStart}
-              onTouchMove={handleTouchMove}
-              onTouchEnd={handleTouchEnd}
-             /></Link>
+             <Link to={"/"}><MdHome size={35}  className='m-2 border rounded-full shadow text-blue-500 shadow-gray-500 ' /></Link>
              <Link to={"/user-orders"}><HiOutlineShoppingBag size={25} className='m-4'/></Link>
              <div>
             <div
