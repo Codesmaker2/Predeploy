@@ -13,7 +13,7 @@ import { HiOutlineShoppingBag } from 'react-icons/hi';
 import {  BiMessageDots, BiUser} from 'react-icons/bi';
 import { useSelector } from 'react-redux';
 import Cart from '../components/cart/Cart';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AiOutlineReload } from 'react-icons/ai';
 import Loader from "../components/Layout/Loader";
 
@@ -21,35 +21,33 @@ import Loader from "../components/Layout/Loader";
 
 const HomePage = () => {
   const {isLoading} = useSelector((state) => state.products);
-
   const [isRefreshing, setRefreshing] = useState(false);
   const [startY, setStartY] = useState(0);
  
 
   const handleTouchStart = (e) => {
     setStartY(e.touches[0].clientY);
-    
+    window.location.reload()
+
   };
 
   const handleTouchMove = (e) => {
+
     const currentY = e.touches[0].clientY;
 
     if (currentY - startY > 50) {
-      // window.location.reload()
+       
       setRefreshing(true);
     }
   };
 
-  const handleTouchEnd = () => {
+  const handleTouchEnd = (e) => {
+    e.preventDefault();
     if (isRefreshing) {
-      window.location.reload()
-      
 
       // Simulate an asynchronous operation (e.g., fetching data from an API)
       setTimeout(() => {
         setRefreshing(false);
-        
-
       }, 1000);
     }
   };
@@ -68,29 +66,33 @@ const HomePage = () => {
     ) : (
      <div
       
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
+     
     >
     <div className='relative mb-5 overflow-hidden 800px:hidden'
     
      >
        <Header activeHeading={1} />
-       <div className='bg-white'>
+       <div className='bg-white'
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+       >
         <Categories /> 
         </div>
 
      
      {isRefreshing && (
       
+      
         <div className="absolute top-[50px] left-0  w-full h-20 flex items-center justify-center">
         <div className="animate-spin">
           <AiOutlineReload className="w-8 h-8" color='blue' />
+        
         </div>
       </div>
       )}
      
-        {!isRefreshing && <p></p>}
+       
       
        
          {/* <Hero /> */}
@@ -111,7 +113,11 @@ const HomePage = () => {
             <div className="flex grid-flow-col-5 justify-between w-full">
              <Link to={"/profile"}><BiUser size={25} className='m-4 rounded-t-lg rounded-b-none'/></Link>
              <Link to={"/inbox"}><BiMessageDots size={25} className='m-4'/></Link>
-             <Link to={"/"}><MdHome size={35}  className='m-2 border rounded-full shadow text-blue-500 shadow-gray-500 ' /></Link>
+             <Link to={"/"}><MdHome size={35}  className='m-2 border rounded-full shadow text-blue-500 shadow-gray-500 ' 
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+             /></Link>
              <Link to={"/user-orders"}><HiOutlineShoppingBag size={25} className='m-4'/></Link>
              <div>
             <div
