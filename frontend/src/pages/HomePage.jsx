@@ -62,7 +62,8 @@ const HomePage = () => {
         <div>
           <div className="relative mb-5 overflow-hidden 800px:hidden">
             <Header activeHeading={1} />
-
+            <br />
+            <br />
             <div
               className="bg-white"
               onTouchStart={handleTouchStart}
@@ -84,9 +85,11 @@ const HomePage = () => {
             )}
 
             {/* <Hero /> */}
-
+                <br />
+                <br />
             <BestDeals />
             <Events />
+            
             <FeaturedProduct />
             <Sponsored />
             <Footer />
