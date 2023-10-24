@@ -15,7 +15,7 @@ import { BsHouseFill, BsTruck } from "react-icons/bs";
 import { HiLocationMarker } from "react-icons/hi";
 import { RiCoupon2Fill } from "react-icons/ri";
 import { BiHomeAlt, BiPen } from "react-icons/bi";
-import NavButton from "../Route/Hero/NavButton";
+
 
 const Checkout = () => {
   const { user } = useSelector((state) => state.user);
