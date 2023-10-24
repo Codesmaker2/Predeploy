@@ -12,6 +12,8 @@ const EventsPage = () => {
         <Loader />
       ) : (
         <div>
+          <br/>
+          <br/>
           <Header activeHeading={4} />
           <EventCard active={true} data={allEvents && allEvents[0]} />
           
