@@ -26,6 +26,8 @@ const ProductDetailsPage = () => {
 
   return (
     <div>
+      <br/>
+      <br/>
       <Header />
       <ProductDetails data={data} />
         {
