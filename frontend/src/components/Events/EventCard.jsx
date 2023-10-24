@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addTocart } from "../../redux/actions/cart";
 import { toast } from "react-toastify";
-import { AiOutlineArrowRight } from "react-icons/ai";
 import { IoIosCart} from "react-icons/io";
 
 const EventCard = ({ active, data }) => {
@@ -22,7 +21,7 @@ const EventCard = ({ active, data }) => {
       } else {
         const cartData = { ...data, qty: 1 };
         dispatch(addTocart(cartData));
-        toast.success("Item added to cart successfully!");
+        toast.success("Item added to cart🛒");
       }
     }
   }
@@ -39,15 +38,26 @@ const EventCard = ({ active, data }) => {
         <img src={`${data.images[0]?.url}`} alt="" className="max-400px:h-[110px] max-400px:w-[130px] max-500px:h-[110px] max-500px:w-[130px] max-640px:h-[110px] max-640px:w-[130px] max-768px:h-[110px] max-768px:w-[130px]" />
       </div>
       <div className="w-full lg:[w-50%] flex flex-col justify-center  ">
+      <div className=" flex items-center justify-start">
+          <h5 className={"text-[15px] max-400px:text-[12px] max-500px:text-[13px] max-640px:text-[13px] max-768px:text-[15px] text-gray-500 pt-0 pb-0.5 text-shadow flex"}><h4 className="text-orange-500 flex pr-2">Colortype:</h4> {data.color}</h5>
+          </div>
         <h2 className={`${styles.productTitle} max-400px:text-[13px] max-500px:text-[15px] max-640px:text-[15px] max-768px:text-[15px]`}>{data.name}</h2>
         <hr />
         <p className="max-400px:hidden">{data.description}</p>
           {/* color type */}
-       <div className=" flex items-center justify-start">
-          <h5 className={"text-[15px] max-400px:text-[12px] max-500px:text-[13px] max-640px:text-[13px] max-768px:text-[15px] text-gray-500 pt-0 pb-0.5 text-shadow flex"}><h4 className="text-orange-500 flex pr-2">Colortype:</h4> {data.color}</h5>
-          </div>
+    
         <div className="flex py-2 justify-between">
-          <div className="flex">
+        <div className="flex">
+        <Link to={`/shop/preview/${data?.shop._id}`}>
+      <img
+              src={`${data?.shop.avatar?.url}`}
+              alt=""
+              className=" flex w-[55px] h-[55px] max-400px:w-[50px] border rounded-full p-1  max-400px:h-[50px] max-500px:w-[50px] max-500px:h-[50px] max-640px:w-[50px] max-640px:h-[50px]  rounded-full cursor-pointer mr-1"
+            />
+        </Link> 
+        
+        </div> 
+          <div className="flex mt-5">
             <h5 className="font-[500] text-[18px] text-red-500 pr-3 line-through">
             ₱{data.originalPrice}
             </h5>
@@ -56,11 +66,9 @@ const EventCard = ({ active, data }) => {
             </h5>
           
           </div>
+          <hr />
           <div className="flex items-center justify-center">
-          <Link to={`/product/${data._id}?isEvent=true`}>
-            <div className="text-[#000]  w-[100px] bg-transparent h-[40px] flex items-center justify-center  border-[2px] shadow-md mr-2 rounded-xl cursor-pointer">
-              <AiOutlineArrowRight size={15} className="pr-1 text-blue-500" /><h1 className="text-blue-500 text-[12px]">See Details</h1></div>
-          </Link>
+          
           <div className="text-[#000]  w-[100px] bg-transparent h-[40px] shadow-md flex items-center justify-center bg-blue-500  border-[2px] rounded-xl cursor-pointer" onClick={() => addToCartHandler(data)}><IoIosCart color="orange" size={20} className="pr-1" /> 
           <h2 className="text-[12px] text-blue-500">Add to cart</h2></div>
         </div>
