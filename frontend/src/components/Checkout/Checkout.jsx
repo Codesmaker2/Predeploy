@@ -154,7 +154,6 @@ const Checkout = () => {
       >
        <h5 className="text-white max-400px:text-[15px] py-10 ">Proceed to Payment Method</h5> <AiOutlineArrowRight className="text-white text-[20px]"/>
       </div>
-      <NavButton/>
     </div>
   );
 };
@@ -233,24 +232,7 @@ const ShippingInfo = ({
         <hr />
       
         <div className="w-full flex pb-3">
-          {/* <div className="w-[50%]">
-            <label className="block pb-2">Country</label>
-            <select
-              className="w-[95%] border h-[40px] rounded-[5px]"
-              value={country}
-              onChange={(e) => setCountry(e.target.value)}
-            >
-              <option className="block pb-2" value="">
-                Choose your country
-              </option>
-              {Country &&
-                Country.getAllCountries().map((item) => (
-                  <option key={item.isoCode} value={item.isoCode}>
-                    {item.name}
-                  </option>
-                ))}
-            </select>
-          </div> */}
+        
          
         </div>
         <div className="w-full flex pb-3">
