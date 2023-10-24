@@ -13,7 +13,7 @@ import { server } from "../../server";
 import { toast } from "react-toastify";
 import { IoScaleOutline, IoSwapHorizontalOutline } from "react-icons/io5";
 import { TbTruckDelivery } from "react-icons/tb";
-import NavButton from "../Route/Hero/NavButton";
+
 
 
 const Payment = () => {
@@ -455,8 +455,7 @@ const CartData = ({ orderData }) => {
       <h5 className="text-[28px] font-[600] text-end pt-3">
         P{orderData?.totalPrice}
       </h5>
-      <br />
-     <NavButton/>
+
     </div>
   );
 };
