@@ -48,7 +48,7 @@ const HomePage = () => {
   // };
   return (
     <>
-    <div className="!overflow-scroll  mb-5 h-[100vh]  w-full 800px:hidden"">
+    <div className="!overflow-scroll  mb-5 h-[100vh]  w-full 800px:hidden">
 
     
       {isLoading ? (
