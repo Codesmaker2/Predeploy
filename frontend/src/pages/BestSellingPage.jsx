@@ -25,7 +25,7 @@ const BestSellingPage = () => {
     isLoading ? (
       <Loader />
     ) : (
-      <div className="h-[90vh]">
+      <div className="h-[70vh]">
       <Header activeHeading={2} />
       <br />
       <br />
