@@ -48,14 +48,14 @@ const HomePage = () => {
   // };
   return (
     <>
-    <div className=" !overflow-scroll">
+    <div className="">
 
     
       {isLoading ? (
         <Loader />
       ) : (
         <div className=" ">
-          <div className=" mb-5 !overflow-scroll h-[100vh] w-full 800px:hidden">
+          <div className=" mb-5 h-[100vh] w-full 800px:hidden">
             <Header activeHeading={1} />
             <br />
             <br />
