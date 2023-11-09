@@ -20,12 +20,12 @@ const BestSellingPage = () => {
 
   return (
    <>
-   <div className="h-[90vh]">
+
    {
     isLoading ? (
       <Loader />
     ) : (
-      <div>
+      <div className="h-[90vh]">
       <Header activeHeading={2} />
       <br />
       <br />
@@ -40,10 +40,11 @@ const BestSellingPage = () => {
     </div>
     )
    }
-   </div>
+ 
    </>
   );
 };
+
 
 
 export default BestSellingPage;
