@@ -13,20 +13,20 @@ const NavButton = () => {
   return (
     <div className="fixed h-[10vh] bottom-0 left-0 w-full bg-white border-t border-gray-300 rounded-t-[20px] 800px:hidden ">
     <div className="container mx-auto  ">
-      <div className="flex  w-full">
+      <div className="flex w-full">
         <div className="flex w-full ">
           <div className="flex grid-flow-col-5 justify-between w-full">
-           <Link to={"/profile"}><BiUser size={25} className='m-4 rounded-t-lg rounded-b-none'/></Link>
-           <Link to={"/inbox"}><BiMessageDots size={25} className='m-4'/></Link>
-           <Link to={"/"}><MdHome size={35}  className='m-2 border rounded-full shadow text-blue-500 shadow-gray-500 cursor-pointer ' /></Link>
-           <Link to={"/user-orders"}><HiOutlineShoppingBag size={25} className='m-4'/></Link>
+           <Link to={"/profile"}><BiUser size={30} className='m-4 rounded-t-lg rounded-b-none'/></Link>
+           <Link to={"/inbox"}><BiMessageDots size={30} className='m-4'/></Link>
+           <Link to={"/"}><MdHome size={45}  className='m-2 border rounded-full shadow text-blue-500 shadow-gray-500 cursor-pointer ' /></Link>
+           <Link to={"/user-orders"}><HiOutlineShoppingBag size={30} className='m-4'/></Link>
            <div>
           <div
             className="relative mr-[20px]"
             onClick={() => setOpenCart(true)}
           >
-            <CgShoppingCart className=" m-1.5 mt-4"
-            size={25} />
+            <CgShoppingCart  className=" m-1.5 mt-4"
+            size={30} />
             <span className="absolute right-0 top-0 rounded-full bg-[#ec3a3a] w-4 h-4  text-white font-mono text-[12px]  leading-tight text-center">
               {cart && cart.length}
             </span>
