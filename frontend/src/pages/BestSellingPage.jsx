@@ -20,12 +20,12 @@ const BestSellingPage = () => {
 
   return (
    <>
-
+    <div className=" !overflow-scroll">
    {
     isLoading ? (
       <Loader />
     ) : (
-      <div className="h-[70vh]">
+      <div className="!overflow-scroll h-[50vh] w-full">
       <Header activeHeading={2} />
       <br />
       <br />
@@ -40,10 +40,13 @@ const BestSellingPage = () => {
     </div>
     )
    }
- 
+ </div>
    </>
   );
 };
+
+
+
 
 
 
