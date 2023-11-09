@@ -239,7 +239,6 @@ const Singup = () => {
                 </label>
               </div>
             </div>
-            <br />
             <hr />
             <br />
 
