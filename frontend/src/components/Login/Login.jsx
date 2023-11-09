@@ -50,7 +50,7 @@ const Login = () => {
         ></path>
       </svg>
       <div className=" sm:mx-auto sm:w-full sm:max-w-md max-400px:h-[30vh]">
-        <div className=" bg-white py-4 px-4 shadow shadow-gray-400 sm:rounded-lg sm:px-10 max-400px:m-2  max-500px:m-10  max-640px:m-10 max-400px:rounded-[20px]">
+        <div className=" bg-white py-4 px-4 shadow shadow-gray-400 sm:rounded-lg sm:px-10 max-400px:m-2  max-500px:m-10  max-640px:m-10 max-400px:rounded-[10px]">
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="  items-center justify-center">
                 <Link to={"/"}>
@@ -147,6 +147,7 @@ const Login = () => {
               </div>
             </div>
             <div>
+              <br/>
               <button
                 type="submit"
                 className="group relative w-full h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
