@@ -48,16 +48,18 @@ const HomePage = () => {
   // };
   return (
     <>
-    <div className="!overflow-scroll  mb-5 h-[100vh]  w-full 800px:hidden">
+    <div className=" !overflow-scroll">
 
     
       {isLoading ? (
         <Loader />
       ) : (
-        <div className="!overflow-scroll">
-          <div className="">
+        <div className=" ">
+          <div className=" mb-5 !overflow-scroll h-[60vh] w-full 800px:hidden">
             <Header activeHeading={1} />
-        
+            <br />
+            <br />
+            <br />
             <div
               className="bg-white"
               onTouchStart={handleTouchStart}
