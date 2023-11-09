@@ -55,7 +55,7 @@ const HomePage = () => {
         <Loader />
       ) : (
         <div className=" ">
-          <div className=" mb-5 !overflow-scroll h-[90vh] w-full 800px:hidden">
+          <div className="  !overflow-scroll h-[90vh] w-full 800px:hidden">
             <Header activeHeading={1} />
             <br />
             <br />
@@ -75,7 +75,7 @@ const HomePage = () => {
             {isRefreshing && (
               <div className="absolute top-[50px] left-0  w-full h-20 flex items-center justify-center">
                 <div className="animate-spin">
-                  <AiOutlineReload className="w-8 h-8" color="blue" />
+                  <AiOutlineReload className="w-8 h-8 bg-white rounded-full p-1" color="blue" />
                 </div>
               </div>
             )}
