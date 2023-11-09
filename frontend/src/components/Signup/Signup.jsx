@@ -182,7 +182,7 @@ const Singup = () => {
 
   return (
     <div
-      className="min-h-screen max-400px:min-h-[30vh] bg-white flex flex-col justify-center mt-10  "
+      className="min-h-screen max-400px:min-h-[30vh] bg-white flex flex-col justify-center "
       //   style={{
       //     backgroundImage: "url(https://okcredit-blog-images-prod.storage.googleapis.com/2022/01/mineralwater2.jpg)",
       // }}
@@ -195,7 +195,7 @@ const Singup = () => {
         ></path>
       </svg>
       <div className="sm:mx-auto sm:w-full sm:max-w-md max-400px:h-[50vh]">
-        <div className="bg-white py-3 px-8 shadow shadow-gray-500 rounded-lg">
+        <div className="bg-white py-3 px-8 ">
             <Link to={"/"}>
         <div className="text-blue-500"><BsArrowBarLeft size={20}/></div>
         </Link>
