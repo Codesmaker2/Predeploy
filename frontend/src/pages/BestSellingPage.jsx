@@ -20,6 +20,7 @@ const BestSellingPage = () => {
 
   return (
    <>
+   <div className="h-[90vh]">
    {
     isLoading ? (
       <Loader />
@@ -39,8 +40,10 @@ const BestSellingPage = () => {
     </div>
     )
    }
+   </div>
    </>
   );
 };
+
 
 export default BestSellingPage;
