@@ -37,7 +37,7 @@ const Login = () => {
 
   return (
     <div
-      className="min-h-screen max-400px:min-h-[90vh] bg-blue-600 flex flex-col justify-center  bg-no-repeat background-cover"
+      className="min-h-screen max-400px:min-h-[100vh] bg-blue-600 flex flex-col justify-center  bg-no-repeat background-cover"
       //   style={{
       //     backgroundImage: "url(https://okcredit-blog-images-prod.storage.googleapis.com/2022/01/mineralwater2.jpg)",
       // }}
