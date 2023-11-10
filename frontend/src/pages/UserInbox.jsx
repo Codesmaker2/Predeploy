@@ -7,9 +7,10 @@ import { server } from "../server";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineArrowRight, AiOutlineSend } from "react-icons/ai";
-import { TfiGallery } from "react-icons/tfi";
+import {  TfiGallery } from "react-icons/tfi";
 import styles from "../styles/styles";
-import { BiArrowToLeft, BiMessageDots } from "react-icons/bi";
+import {  BiMessageDots } from "react-icons/bi";
+import { IoBackspaceOutline } from "react-icons/io5";
 const ENDPOINT = "https://socket-ecommerce-tu68.onrender.com/";
 const socketId = socketIO(ENDPOINT, { transports: ["websocket"] });
 
@@ -209,21 +210,24 @@ const UserInbox = ({active}) => {
   }, [messages]);
 
   return (
-    <div className="w-full">
-      <div className="flex items-center justify-between">
-      <Link to={"/"}>
-        <BiArrowToLeft size={35} color={`${active === 2 ? "gray" : "blue"}`} className="cursor pointer"/>
-      </Link>
-      <BiMessageDots size={30} className="mx-2"/>
-      </div>
-     <hr />
+    <div className="w-full !overflow-scroll h-[95vh]">
+      
+ 
 
       {!open && (
         <>
           {/* <Header /> */}
+          <div className="flex items-center justify-between">
+      <Link to={"/"}>
+        <IoBackspaceOutline size={30} color={`${active === 2 ? "gray" : "blue"}`} className="cursor pointer mx-2"/>
+      </Link>
+      <BiMessageDots size={30} className="mx-2 my-2"/>
+      </div>
+      <hr />
           <h1 className="text-center text-[30px] py-3 font-Poppins">
             All Messages
           </h1>
+          <hr />
           {/* All messages list */}
           {conversations &&
             conversations.map((item, index) => (
@@ -299,7 +303,7 @@ const MessageList = ({
   return (
     <div
       className={`w-full flex p-3 px-3 ${
-        active === index ? "bg-[#cb692310]" : "bg-transparent"
+        active === index ? "bg-[#8cc1fb10]" : "bg-transparent"
       }  cursor-pointer`}
       onClick={(e) =>
         setActive(index) ||
@@ -313,12 +317,12 @@ const MessageList = ({
         <img
           src={`${user?.avatar?.url}`}
           alt=""
-          className="w-[50px] h-[50px] rounded-full"
+          className="w-[50px] h-[50px] rounded-full border p-1"
         />
         {online ? (
           <div className="w-[12px] h-[12px] bg-green-500 rounded-full absolute top-[2px] right-[2px]" />
         ) : (
-          <div className="w-[12px] h-[12px] bg-[#c7b9b9] rounded-full absolute top-[2px] right-[2px]" />
+          <div className="w-[12px] h-[12px] bg-gray-500 rounded-full absolute top-[2px] right-[2px]" />
         )}
       </div>
       <div className="pl-3">
@@ -349,7 +353,7 @@ const SellerInbox = ({
   return (
     <div className="w-[full] min-h-full flex flex-col justify-between p-5">
       {/* message header */}
-      <div className="w-full flex p-3 items-center justify-between bg-slate-200">
+      <div className="w-full flex p-3 items-center justify-between bg-blue-200 rounded-[2px]">
         <div className="flex">
           <img
             src={`${userData?.avatar?.url}`}
@@ -369,7 +373,7 @@ const SellerInbox = ({
       </div>
 
       {/* messages */}
-      <div className="px-3 h-[75vh] py-3 overflow-y-scroll">
+      <div className="px-3 h-[65vh] py-3 overflow-y-scroll bg-white">
         {messages &&
           messages.map((item, index) => (
             <div
@@ -441,11 +445,14 @@ const SellerInbox = ({
           <input type="submit" value="Send" className="hidden" id="send" />
           <label htmlFor="send">
             <AiOutlineSend
+            color="blue"
               size={20}
               className="absolute right-4 top-5 cursor-pointer"
             />
           </label>
+          <hr />
         </div>
+      
       </form>
     </div>
   );
