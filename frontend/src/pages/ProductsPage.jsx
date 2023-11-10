@@ -32,7 +32,7 @@ const ProductsPage = () => {
     isLoading ? (
       <Loader />
     ) : (
-      <div>
+      <div className="!overflow-scroll h-[96vh] w-full">
       <Header activeHeading={3} />
       <br />
       <br />
