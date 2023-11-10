@@ -55,7 +55,7 @@ const HomePage = () => {
         <Loader />
       ) : (
         <div className=" ">
-          <div className="  !overflow-scroll h-[90vh] w-full 800px:hidden">
+          <div className="  !overflow-scroll h-[95vh] w-full 800px:hidden">
             <Header activeHeading={1} />
             <br />
             <br />
