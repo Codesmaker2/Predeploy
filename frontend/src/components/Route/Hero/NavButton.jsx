@@ -18,7 +18,7 @@ const NavButton = () => {
           <div className="flex grid-flow-col-5 justify-between w-full">
            <Link to={"/profile"}><BiUser size={30} className='m-4 rounded-t-lg rounded-b-none'/></Link>
            <Link to={"/inbox"}><BiMessageDots size={30} className='m-4'/></Link>
-           <Link to={"/"}><MdHome size={45}  className='m-2 border rounded-full shadow text-blue-500 shadow-gray-500 cursor-pointer ' /></Link>
+           <Link to={"/"}><MdHome size={45}  className='m-2 border rounded-full shadow text-blue-500 shadow-gray-500 cursor-pointer outline-none ' /></Link>
            <Link to={"/user-orders"}><HiOutlineShoppingBag size={30} className='m-4'/></Link>
            <div>
           <div
