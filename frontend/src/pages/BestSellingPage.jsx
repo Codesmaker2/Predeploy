@@ -25,7 +25,7 @@ const BestSellingPage = () => {
     isLoading ? (
       <Loader />
     ) : (
-      <div className="!overflow-scroll h-[50vh] w-full">
+      <div className="!overflow-scroll h-[98vh] w-full">
       <Header activeHeading={2} />
       <br />
       <br />
