@@ -35,26 +35,7 @@ const NavButton = () => {
     </div>
     </div>
    
-    {/* <div className="flex items-center justify-between w-full">
-           <Link to={"/profile"}><BiUser size={25} className='m-4 rounded-t-lg rounded-b-none'/></Link>
-           <Link to={"/inbox"}><BiMessageDots size={25} className='m-4'/></Link>
-           <Link to={"/"}><MdHome size={40}  className='m-2 border rounded-full shadow text-blue-500 shadow-gray-500 cursor-pointer tap:bg-white outline-none ' /></Link>
-           <Link to={"/user-orders"}><HiOutlineShoppingBag size={25} className='m-4'/></Link>
-           <div>
-          <div
-            className="relative mr-[25px]"
-            onClick={() => setOpenCart(true)}
-          >
-            <CgShoppingCart  className=" mb-3 mt-4"
-            size={25} />
-            <span className="absolute right-0 top-0 rounded-full bg-[#ec3a3a] w-4 h-4  text-white font-mono text-[12px] leading-tight text-center">
-              {cart && cart.length}
-            </span>
-          </div>
-        </div>
-       
-
-          </div> */}
+   
 
   </div>
   )
