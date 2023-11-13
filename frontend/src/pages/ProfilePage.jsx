@@ -11,7 +11,7 @@ const ProfilePage = () => {
   const [active, setActive] = useState(1);
 
   return (
-    <div className="!overflow-scroll h-[96vh] 800px:hidden bg-white">
+    <div className="!overflow-scroll h-[100vh] 800px:hidden bg-white">
       {loading ? (
         <Loader />
       ) : (
