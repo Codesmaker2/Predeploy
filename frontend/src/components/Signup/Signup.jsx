@@ -196,9 +196,7 @@ const Singup = () => {
       </svg>
       <div className="sm:mx-auto sm:w-full sm:max-w-md ">
         <div className="bg-white py-3 px-8 ">
-            <Link to={"/"}>
-        <div className="text-blue-500"><BsArrowBarLeft size={20}/></div>
-        </Link>
+           
           <form className="" onSubmit={handleSubmit}>
             <h2 className="text-center text-[22px]  text-blue-600 ">
               Register as a New User
