@@ -25,10 +25,10 @@ const NavButton = () => {
          {openCart ? <Cart setOpenCart={setOpenCart} /> : null}
       </div>
       
-      <div className='flex items-center justify-between list-none w-full  text-[0.8em] '>
+      <div className='flex items-center justify-between list-none w-full ml-1 text-[0.8em] '>
       <li>Me</li>
       <li>Inbox</li>
-      <li className='ml-1.5'>_____</li>
+      <li>_____</li>
       <li>Order</li>
       <li>Cart</li>
     </div>
