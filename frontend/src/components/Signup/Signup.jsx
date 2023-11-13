@@ -182,7 +182,7 @@ const Singup = () => {
 
   return (
     <div
-      className="max-400px:min-h-[100vh] bg-white flex flex-col justify-center "
+      className="max-400px:h-[100vh] bg-white flex flex-col justify-center "
       //   style={{
       //     backgroundImage: "url(https://okcredit-blog-images-prod.storage.googleapis.com/2022/01/mineralwater2.jpg)",
       // }}
@@ -364,7 +364,7 @@ const Singup = () => {
                   </p>
                 )}
               </label>
-              <div className="mt-1">
+              <div className="mt-1 relative">
                 <input
                   type={visible ? "text" : "password"}
                   placeholder="Type Password..."
@@ -405,7 +405,7 @@ const Singup = () => {
               >
                 Confirm Password
               </label>
-              <div className="mt-1">
+              <div className="mt-1 relative">
                 <input
                   type={visible ? "text" : "password"}
                   placeholder="Confirm Password..."
