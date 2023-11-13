@@ -44,6 +44,7 @@ const Header = ({ activeHeading }) => {
   const [isSubItemsOpen, setSubItemsOpen] = useState(false);
   const [isItemsOpen, setItemsOpen] = useState(false);
   const navigate = useNavigate();
+ const [showConfirmation, setShowConfirmation] = useState(false);
 
 
 
@@ -514,18 +515,25 @@ const Header = ({ activeHeading }) => {
          
         </li>
 
-        {isAuthenticated ? (
-                  <div  className="text-gray-500 flex mt-4 pl-4 " >
-                  <RiShutDownLine  className="mr-1 text-[red]" size={24} onClick={logoutHandler} /> Logout
-                  
-                </div>
-                  
-                  
-                ) : (
-                  <>
-                 
-                  </>
-                )}
+      <div  className="text-gray-500 flex mt-4 pl-4 " >
+                  <RiShutDownLine  className="mr-1 text-[red]" size={24} onClick={() => setShowConfirmation(true)} /> Logout   
+    </div>
+
+      {showConfirmation && (
+        <div className="fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center">
+          <div className="bg-white p-8 rounded">
+            <p className="text-black">Are you sure you want to logout?</p>
+            <div className="mt-4 flex justify-end">
+              <button onClick={() => setShowConfirmation(false)} className="mr-4 text-gray-600 hover:text-gray-800 cursor-pointer">
+                Cancel
+              </button>
+              <button onClick={logoutHandler} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded cursor-pointer">
+                Logout
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       </ul>
       ) : (
