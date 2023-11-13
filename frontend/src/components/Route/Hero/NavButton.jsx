@@ -4,6 +4,7 @@ import { CgProfile, CgShoppingCart } from 'react-icons/cg'
 import Cart from '../../cart/Cart'
 import { useSelector } from 'react-redux'
 import { TbSmartHome } from 'react-icons/tb'
+import { Link } from 'react-router-dom'
 
 const NavButton = () => {
     const [openCart, setOpenCart] = useState(false);
