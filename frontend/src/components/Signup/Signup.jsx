@@ -358,13 +358,13 @@ const Singup = () => {
                     <p style={{ color: 'orange'}} className=" max-400px:text-[12px]">Password atleast 8 characters!.</p>
                 )} */}
                 {!isValid && (
-                  <p style={{ color: "red" }} className="max-400:text-[12px]">
+                  <p style={{ color: "red" }} className="max-400px:text-[0.8em]">
                     Password must be at least 8 characters long and contain at
                     least one number and letters.
                   </p>
                 )}
               </label>
-              <div className="mt-1 relative">
+              <div className="mt-1">
                 <input
                   type={visible ? "text" : "password"}
                   placeholder="Type Password..."
@@ -394,7 +394,7 @@ const Singup = () => {
 
             <div>
               {!passwordMatch && (
-                <p style={{ color: "red" }} className="max-400px:text-[12px]">
+                <p style={{ color: "red" }} className="max-400px:text-[0.8em]">
                   Passwords do not match!
                 </p>
               )}
@@ -405,7 +405,7 @@ const Singup = () => {
               >
                 Confirm Password
               </label>
-              <div className="mt-1 relative">
+              <div className="mt-1">
                 <input
                   type={visible ? "text" : "password"}
                   placeholder="Confirm Password..."
