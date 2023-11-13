@@ -432,6 +432,7 @@ const Header = ({ activeHeading }) => {
               <hr />
       </div>
       <hr />
+        {isAuthenticated ? (
       <ul className="py-3">
         <li className="pl-4 pr-2 ">
           <div  className="text-blue-700 flex">
@@ -512,15 +513,26 @@ const Header = ({ activeHeading }) => {
           )}
          
         </li>
-        <div  className="text-gray-500 flex mt-4 pl-4 " >
-            <RiShutDownLine  className="mr-1 text-[red]" size={24} onClick={logoutHandler} /> Logout
-            
-          </div>
-          
-          
-        
-        
+
+        {isAuthenticated ? (
+                  <div  className="text-gray-500 flex mt-4 pl-4 " >
+                  <RiShutDownLine  className="mr-1 text-[red]" size={24} onClick={logoutHandler} /> Logout
+                  
+                </div>
+                  
+                  
+                ) : (
+                  <>
+                 
+                  </>
+                )}
+
       </ul>
+      ) : (
+        <>
+  
+        </>
+      )}
       <br />
       <div  className="text-gray-500 flex mt-4  justify-evenly" >
             <Link to={"https://www.facebook.com"}><RiFacebookCircleFill  className="mr-1 text-[blue]" size={24} /><h5 className="text-[7px]">Facebook</h5></Link>
