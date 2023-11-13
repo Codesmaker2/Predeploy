@@ -174,7 +174,7 @@ const ProfileContent = ({  setActive, active }) => {
           </div>
         </Link>
       )}
-          <div className=" bg-gray-100 w-full px-5 items-center justify-center ">
+          <div className=" bg-white w-full px-5 items-center justify-center ">
             <form onSubmit={handleSubmit} props-required={true}>
               <div className="w-full  block pb-3  items-center justify-center ">
                 <div className=" w-[100%] 800px:w-[50%] 800px:ml-[37%] 800px:pt-5">
@@ -184,7 +184,7 @@ const ProfileContent = ({  setActive, active }) => {
                   <input
                     type="text"
                     placeholder="Type Full Name..."
-                    className={`${styles.input} max-400px:w-[100%] mb-2 800px:w-[50%]`}
+                    className={`${styles.input} max-400px:w-[100%] mb-2 800px:w-[50%] border border-gray-500`}
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value.replace(/[^A-Za-z ]/g, ''))}
@@ -198,7 +198,7 @@ const ProfileContent = ({  setActive, active }) => {
                   <input
                     type="text"
                     placeholder="Type Email Address..."
-                    className={`${styles.input} max-400px:w-[100%] mb-2 800px:w-[50%]`}
+                    className={`${styles.input} max-400px:w-[100%] mb-2 800px:w-[50%] border-gray-500`}
                     required
                     disabled
                     value={email}
@@ -221,7 +221,7 @@ const ProfileContent = ({  setActive, active }) => {
                     maxLength={11}
                     title="Please enter exactly 11 digits." 
                     placeholder="Type Phone Number..."
-                    className={`${styles.input} max-400px:w-[100%] mb-2 800px:w-[50%]`}
+                    className={`${styles.input} max-400px:w-[100%] mb-2 800px:w-[50%] border-gray-500`}
                     required
                     disabled
                     value={phoneNumber}
@@ -242,7 +242,7 @@ const ProfileContent = ({  setActive, active }) => {
                     name="facebook"
                     title="Facebook Link." 
                     placeholder=" Provide your profile facebook link..."
-                    className={`${styles.input} max-400px:w-[100%] mb-2 800px:w-[50%]`}
+                    className={`${styles.input} max-400px:w-[100%] mb-2 800px:w-[50%] border-gray-500`}
                     required
                     value={facebooklink}
                     onChange={(e) => setFacebooklink(e.target.value)
@@ -258,7 +258,7 @@ const ProfileContent = ({  setActive, active }) => {
                   <input
                     type="password"
                     placeholder="Type your Password..."
-                    className={`${styles.input} max-400px:w-[100%] mb-2 800px:w-[50%]`}
+                    className={`${styles.input} max-400px:w-[100%] mb-2 800px:w-[50%] border-gray-500`}
                     required
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
