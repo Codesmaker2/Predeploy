@@ -325,7 +325,7 @@ const Header = ({ activeHeading }) => {
                 {searchData && (
                   <div className="absolute bg-[#fff] z-10 shadow w-full left-0 p-3" >
                      <div className="flex items-center justify-end">
-                  <Link to={"/"}> <MdClose size={20} className="flex"/></Link>
+                  <Link to={"/"}> <MdClose size={20} className="flex cursor-pointer"/></Link>
                    </div>
                     {searchData.map((i,index) => {
                       // const d = i.name;
