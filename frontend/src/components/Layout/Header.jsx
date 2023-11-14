@@ -19,7 +19,7 @@ import { useSelector } from "react-redux";
 import Cart from "../cart/Cart";
 import Wishlist from "../Wishlist/Wishlist";
 import { RxCaretDown, RxCaretUp, RxCross1, RxHamburgerMenu} from "react-icons/rx";
-import {  MdFacebook } from "react-icons/md";
+import { MdClose, MdFacebook } from "react-icons/md";
 import {  BsDropletFill } from "react-icons/bs";
 import { HiQuestionMarkCircle } from "react-icons/hi";
 import { RiFacebookCircleFill, RiShutDownLine, RiYoutubeFill } from "react-icons/ri";
