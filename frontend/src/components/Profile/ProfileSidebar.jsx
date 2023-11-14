@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineLogin, AiOutlineMessage } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { HiOutlineReceiptRefund } from "react-icons/hi";
@@ -17,6 +17,7 @@ import { BiUserPin } from "react-icons/bi";
 
 const ProfileSidebar = ({ setActive, active }) => {
   const navigate = useNavigate();
+  const [showConfirmation, setShowConfirmation] = useState(false);
 //  const {user} = useSelector((state) => state.user);
   const logoutHandler = () => {
     axios
@@ -24,6 +25,7 @@ const ProfileSidebar = ({ setActive, active }) => {
       .then((res) => {
         toast.success(res.data.message);
         window.location.reload(true);
+        setShowConfirmation(false)
         navigate("/login");
       })
       .catch((error) => {
@@ -127,32 +129,12 @@ const ProfileSidebar = ({ setActive, active }) => {
           Address
         </span>
       </div>
-{/* 
-      {user && user?.role === "Admin" && (
-        <Link to="/admin/dashboard">
-          <div
-            className="flex items-center cursor-pointer w-full "
-            onClick={() => setActive(8)}
-          >
-            <MdOutlineAdminPanelSettings
-              size={20}
-              color={active === 7 ? "blue" : ""}
-            />
-            <span
-              className={`pl-3 ${
-                active === 8 ? "text-[black]" : ""
-              } 800px:block hidden`}
-            >
-              Admin Dashboard
-            </span>
-          </div>
-        </Link>
-      )} */}
+
       <div
         className="single_item flex items-center cursor-pointer w-full "
-        onClick={logoutHandler}
+        
       >
-        <AiOutlineLogin size={20} color="red" />
+        <AiOutlineLogin size={20} color="red" onClick={() => setShowConfirmation(true)}/>
         <span
           className={`pl-3  ${
             active === 8 ? "text-[black]" : ""
@@ -160,7 +142,23 @@ const ProfileSidebar = ({ setActive, active }) => {
         >
           Log out
         </span>
+        {showConfirmation && (
+        <div className="fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center">
+          <div className="bg-white p-8 rounded">
+            <p className="text-black">Are you sure you want to logout?</p>
+            <div className="mt-4 flex justify-end">
+              <button onClick={() => setShowConfirmation(false)} className="mr-4 text-gray-600 hover:text-gray-800 cursor-pointer">
+                Cancel
+              </button>
+              <button onClick={logoutHandler} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded cursor-pointer">
+                Logout
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       </div>
+      
     </div>
   );
 };
