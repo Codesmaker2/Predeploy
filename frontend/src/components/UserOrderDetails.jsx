@@ -64,8 +64,8 @@ const UserOrderDetails = ({active}) => {
   };
 
   return (
-    <div className={`py-2 min-h-screen ${styles.section}`}>
-      
+    <div className=" w-full px-4">
+     
       <div className="w-full flex items-center justify-between">
       <Link to={"/user-orders"}>
         <RxCaretLeft size={40} color={`${active === 2 ? "gray" : "blue"}`} className="cursor pointer"/>
@@ -76,9 +76,10 @@ const UserOrderDetails = ({active}) => {
           <h1 className="pl-2 max-400px:text-[15px] max-500px:text-[17px] max640px:text-[18px] max-768px:text-[20px]">Order Details</h1>
         </div>
       </div>
+      <hr />
 
       <div className="w-full flex items-center justify-center pt-6">
-        <h5 className="text-[#0f21ae84] max-400px:text-[12px] max-500px:text-[13px] max640px:text-[18px] max-768px:text-[20px] ">
+        <h5 className="text-[#1129e084] max-400px:text-[12px] max-500px:text-[13px] max640px:text-[18px] max-768px:text-[20px] ">
           Order ID: <span className="mr-2">#{data?._id?.slice(0, 8)}</span><span className="mr-2">|</span>
         </h5>
         <h5 className="text-[#00000084] max-400px:text-[12px] max-500px:text-[17px] max640px:text-[18px] max-768px:text-[20px]">
@@ -87,10 +88,7 @@ const UserOrderDetails = ({active}) => {
       </div>
 
       {/* order items */}
-     
-      <br />
-      <hr />
-      <br />
+     <br />
       {data &&
         data?.cart.map((item, index) => {
           return(
@@ -98,7 +96,7 @@ const UserOrderDetails = ({active}) => {
             <img
               src={`${item.images[0]?.url}`}
               alt=""
-              className="w-[80x] h-[80px]"
+              className="w-[70px] h-[60px]"
             />
             
             <div className="w-full">
