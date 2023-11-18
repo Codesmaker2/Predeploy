@@ -6,10 +6,8 @@ import UserOrderDetails from "../components/UserOrderDetails";
 const OrderDetailsPage = () => {
   return (
     <div className="!overflow-scroll h-[100vh] bg-white">
-      <br/>
-      <br/>
-      <br/>
-        <Header />
+     
+      
         <UserOrderDetails />
         <Footer />
     </div>
