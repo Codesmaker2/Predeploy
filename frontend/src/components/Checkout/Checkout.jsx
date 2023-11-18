@@ -222,7 +222,7 @@ const Checkout = () => {
     </div>
       </div>
       <div
-        className={`${styles.button} max-400px:w-[250px] 400px:w-[250px] 800px:w-[240px] mt-10`}
+        className={`${styles.button} max-400px:w-[250px] 400px:w-[250px] 800px:w-[240px] mt-2`}
         onClick={paymentSubmit}
       >
        <h5 className="text-white max-400px:text-[15px] py-2 ">Proceed to Payment Method</h5> <AiOutlineArrowRight className="text-white text-[20px]"/>
