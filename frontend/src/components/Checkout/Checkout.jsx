@@ -14,7 +14,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { BsHouseFill, BsTruck } from "react-icons/bs";
 import { HiLocationMarker } from "react-icons/hi";
 import { RiCoupon2Fill } from "react-icons/ri";
-import { BiHomeAlt, BiPen } from "react-icons/bi";
+import { BiCaretDown,BiHomeAlt, BiPen } from "react-icons/bi";
 import { RxCross1 } from "react-icons/rx";
 
 
@@ -356,7 +356,7 @@ const ShippingInfo = ({
         className="text-[18px] cursor-pointer inline-block max-400px:text-[17px]"
         onClick={() => setUserInfo(!userInfo)}
       >
-        <div className="flex"><CgArrowDown size={25}/>Choose default Home Address </div>
+        <div className="flex"><BiCaretDown size={25}/>Choose default Home Address </div>
       </h5>
       {userInfo && (
         <div>
