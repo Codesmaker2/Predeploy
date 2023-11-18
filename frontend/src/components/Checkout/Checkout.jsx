@@ -15,6 +15,7 @@ import { BsHouseFill, BsTruck } from "react-icons/bs";
 import { HiLocationMarker } from "react-icons/hi";
 import { RiCoupon2Fill } from "react-icons/ri";
 import { BiHomeAlt, BiPen } from "react-icons/bi";
+import { RxCross1 } from "react-icons/rx";
 
 
 const Checkout = () => {
@@ -31,6 +32,16 @@ const Checkout = () => {
   const [couponCodeData, setCouponCodeData] = useState(null);
   const [discountPrice, setDiscountPrice] = useState(null);
   const navigate = useNavigate();
+
+  const [isPopupOpen, setPopupOpen] = useState(false);
+
+  const openPopup = () => {
+    setPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setPopupOpen(false);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -136,7 +147,7 @@ const Checkout = () => {
             setZipCode={setZipCode}
           />
         </div>
-        <div className="w-full 800px:w-[35%] 800px:mt-0 mt-8">
+        <div className="w-full 800px:w-[35%] 800px:mt-0 ">
           <CartData
             handleSubmit={handleSubmit}
             totalPrice={totalPrice}
@@ -147,12 +158,74 @@ const Checkout = () => {
             discountPercentenge={discountPercentenge}
           />
         </div>
+        <div className=" flex items-center justify-center">
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute top-5"
+        onClick={openPopup}
+      >
+        Open Coupon Form
+      </button>
+
+      {isPopupOpen && (
+        <div className="w-full fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="max-400px:w-[90%] 400px:w-[90%] max-500px:w-[60%] 800px:w-[30%]  bg-white p-2 rounded shadow-md">
+          <div className=" w-full bg-[#fff] h-full rounded-md p-5 pb-8 border-[2px] border-blue-500  ">
+         <div className="flex justify-end">
+          <RxCross1 size={25} onClick={closePopup} className=" cursor-pointer"/>
+         </div>
+   <div className="flex items-center justify-between"> <RiCoupon2Fill color="red" size={40}/> <RiCoupon2Fill  color="red" size={40}/></div>
+   <br />
+     <div className="flex justify-between">
+     <IoScaleOutline className="text-[30px] text-blue-500"/><h3 className="text-[16px] font-[400] text-[#000000a4]">Subtotal:</h3>
+       <h5 className="text-[18px] font-[600]">P{subTotalPrice}</h5>
+     </div>
+     <br />
+     <div className="flex justify-between">
+     <BsTruck className="text-[30px] text-blue-500"/><h3 className="text-[16px] font-[400] text-[#000000a4]">Delivery Fee:</h3>
+       <h5 className="text-[18px] font-[600]">Free</h5>
+     </div>
+     <br />
+     <div className="flex justify-between border-b pb-3">
+     <IoSwapHorizontalOutline className="text-[30px] text-blue-500"/><h3 className="text-[16px] font-[400] text-[#000000a4]">Discount:</h3>
+       <h5 className="text-[18px] font-[600]">
+         - {discountPercentenge ? "P" + discountPercentenge.toString() : null}
+       </h5>
+     </div>
+     <h5 className="text-[18px] font-[600] text-end pt-3">P{totalPrice}</h5>
+     <br />
+     <form onSubmit={handleSubmit}>
+       <input
+         type="number"
+         className={`${styles.input} h-[40px] pl-2`}
+         placeholder="Input Discount Code"
+         value={couponCode}
+         onChange={(e) => setCouponCode(e.target.value)}
+         required
+       />
+       <input
+         className={`w-full h-[40px] border border-blue-500 text-center text-blue-500 rounded-[3px] mt-8 cursor-pointer`}
+         required
+         value="Apply Discount Code"
+         type="submit"
+       />
+     </form>
+     <div className="bg-blue-500 h-1"></div>
+   </div>
+            {/* Your form content goes here */}
+            <form>
+              {/* Form fields go here */}
+             
+            </form>
+          </div>
+        </div>
+      )}
+    </div>
       </div>
       <div
         className={`${styles.button} max-400px:w-[250px] 400px:w-[250px] 800px:w-[240px] mt-10`}
         onClick={paymentSubmit}
       >
-       <h5 className="text-white max-400px:text-[15px] py-10 ">Proceed to Payment Method</h5> <AiOutlineArrowRight className="text-white text-[20px]"/>
+       <h5 className="text-white max-400px:text-[15px] py-2 ">Proceed to Payment Method</h5> <AiOutlineArrowRight className="text-white text-[20px]"/>
       </div>
     </div>
   );
@@ -328,46 +401,8 @@ const CartData = ({
 }) => {
   return (
     
-    <div className=" w-full bg-[#fff] h-full rounded-md p-5 pb-8 border-[2px] border-blue-500  ">
-   
-    <div className="flex items-center justify-between"> <RiCoupon2Fill color="red" size={40}/> <RiCoupon2Fill  color="red" size={40}/></div>
-    <br />
-      <div className="flex justify-between">
-      <IoScaleOutline className="text-[30px] text-blue-500"/><h3 className="text-[16px] font-[400] text-[#000000a4]">Subtotal:</h3>
-        <h5 className="text-[18px] font-[600]">P{subTotalPrice}</h5>
-      </div>
-      <br />
-      <div className="flex justify-between">
-      <BsTruck className="text-[30px] text-blue-500"/><h3 className="text-[16px] font-[400] text-[#000000a4]">Delivery Fee:</h3>
-        <h5 className="text-[18px] font-[600]">Free</h5>
-      </div>
-      <br />
-      <div className="flex justify-between border-b pb-3">
-      <IoSwapHorizontalOutline className="text-[30px] text-blue-500"/><h3 className="text-[16px] font-[400] text-[#000000a4]">Discount:</h3>
-        <h5 className="text-[18px] font-[600]">
-          - {discountPercentenge ? "P" + discountPercentenge.toString() : null}
-        </h5>
-      </div>
-      <h5 className="text-[18px] font-[600] text-end pt-3">P{totalPrice}</h5>
-      <br />
-      <form onSubmit={handleSubmit}>
-        <input
-          type="number"
-          className={`${styles.input} h-[40px] pl-2`}
-          placeholder="Input Discount Code"
-          value={couponCode}
-          onChange={(e) => setCouponCode(e.target.value)}
-          required
-        />
-        <input
-          className={`w-full h-[40px] border border-blue-500 text-center text-blue-500 rounded-[3px] mt-8 cursor-pointer`}
-          required
-          value="Apply Discount Code"
-          type="submit"
-        />
-      </form>
-      <div className="bg-blue-500 h-1"></div>
-    </div>
+    <>
+    </>
     
   );
 };
