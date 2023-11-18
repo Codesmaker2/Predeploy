@@ -31,7 +31,7 @@ const CustomerDetails = () => {
       const data = orders && orders.find((item) => item._id === id);
 
   return (
-    <div className="w-full 800px:flex items-center border border-gray-400  p-2 bg-white px-10">
+    <div className="w-full 800px:flex items-center border border-gray-400  p-2 bg-white px-5">
         <div className="w-full 800px:w-[60%]">
         <h4 className="pt-1 max-400px:text-[16px] max-500px:text-[16px]  max-640px:text-[18px] max-768px:text-[20px] font-[600]">ℹ️ Customer Info:</h4>
         <div className="flex ">
@@ -55,7 +55,14 @@ const CustomerDetails = () => {
         </div>
         <br />
         <hr />
-        <div className="w-full 800px:w-[40%]">
+        <div className="w-full flex 800px:w-[40%]">
+        {
+            data?.status === "Delivered" && (
+              <div className="w-[100px] border h-[25px] mt-2 flex shadow-md items-center justify-center rounded-xl cursor-pointer text-gray-500 max-400px:text-[13px]"
+              onClick={refundHandler}
+              >Give a Refund</div>
+            )
+           }
           <div className="flex pt-2 text-[20px] max-400px:text-[17px] items-center max-400px:justify-end">
           <h4 className="shadow-sm">
           💳Payment Status:{" "}
@@ -63,13 +70,7 @@ const CustomerDetails = () => {
           </h4>
           </div>
          
-           {
-            data?.status === "Delivered" && (
-              <div className="w-[100px] border h-[40px] flex shadow-md items-center justify-center rounded-xl cursor-pointer text-gray-500 max-400px:text-[13px]"
-              onClick={refundHandler}
-              >Give a Refund</div>
-            )
-           }
+           
            
         </div>
       </div>
@@ -77,4 +78,3 @@ const CustomerDetails = () => {
 }
 
 export default CustomerDetails
-
