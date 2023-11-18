@@ -13,7 +13,7 @@ import { CgArrowDown,CgNametag } from "react-icons/cg";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsHouseFill, BsTruck } from "react-icons/bs";
 import { HiLocationMarker } from "react-icons/hi";
-import { RiCoupon2Fill } from "react-icons/ri";
+import { RiCoupon3Fill } from "react-icons/ri";
 import { BiCaretDown,BiHomeAlt, BiPen } from "react-icons/bi";
 import { RxCross1 } from "react-icons/rx";
 
@@ -159,12 +159,7 @@ const Checkout = () => {
           />
         </div>
         <div className=" flex items-center justify-center">
-      <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute top-15"
-        onClick={openPopup}
-      >
-        Open Coupon Form
-      </button>
+      <RiCoupon3Fill onClick={openPopup} size={45} color="red" className="rounded-full border shadow-sm p-1 bg-white hover:bg-white text-white font-bold py-2   border-b-red-500 absolute top-[9%] cursor-pointer animate-bounce shodow-xl"/>
 
       {isPopupOpen && (
         <div className="w-full fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
