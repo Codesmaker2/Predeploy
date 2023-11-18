@@ -212,8 +212,8 @@ const UserOrderDetails = ({active}) => {
       </div>
     
       
-      <hr />
-      <div className="w-full 800px:flex items-center border p-2 bg-white">
+    
+      <div className="w-full 800px:flex items-center border rounded-[5px] p-2 bg-white">
         <div className="w-full 800px:w-[60%]">
         <h4 className="pt-1 max-400px:text-[16px] max-500px:text-[16px]  max-640px:text-[18px] max-768px:text-[20px] font-[600]">ℹ️ Customer Info:</h4>
         <div className="flex ">
