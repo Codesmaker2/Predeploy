@@ -252,7 +252,7 @@ const ShippingInfo = ({
 }) => {
   return (
     
-    <div className=" w-full 800px:w-[65%] bg-white rounded-md p-5 pb-8  shadow-xl justify-end  ">
+    <div className=" w-full 800px:w-[65%] bg-white rounded-md p-5 pb-1  shadow-xl justify-end  ">
       
       <h5 className="text-[18px] font-[500]"><div className="flex justify-between"><BiHomeAlt size={25}/> | Home Delivery Address</div></h5>
       <br />
@@ -382,7 +382,7 @@ const ShippingInfo = ({
         </div>
         
       )}
-      <div className="bg-blue-500 h-1"></div>
+
       
     </div>
     
