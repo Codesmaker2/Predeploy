@@ -26,7 +26,7 @@ const Cart = ({ setOpenCart }) => {
   };
 
   return (
-    <div className="fixed !overflow-scroll top-0 left-0 w-full bg-[#0000004b] z-10">
+    <div className="fixed !overflow-scroll top-0 left-0 w-full inset-0  bg-[#0000004b] z-10">
       <div className="fixed top-0 right-0 h-full max-400px:w-[80%] max-500px:w-[80%] max-640px:w-[80%] max-768px:w-[80%] 800px:w-[25%] bg-white flex flex-col overflow-y-scroll justify-between shadow-sm">
         {cart && cart.length === 0 ? (
           <div className="w-full h-screen flex items-center justify-center">
