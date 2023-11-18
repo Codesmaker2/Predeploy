@@ -65,11 +65,13 @@ const UserOrderDetails = ({active}) => {
 
   return (
     <div className={`py-2 min-h-screen ${styles.section}`}>
+      
+      <div className="w-full flex items-center justify-between">
       <Link to={"/user-orders"}>
         <RxCaretLeft size={40} color={`${active === 2 ? "gray" : "blue"}`} className="cursor pointer"/>
       </Link>
-      <div className="w-full flex items-center justify-center">
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-between">
+       
           <TbListDetails size={30} className="text-blue-500"/>
           <h1 className="pl-2 max-400px:text-[15px] max-500px:text-[17px] max640px:text-[18px] max-768px:text-[20px]">Order Details</h1>
         </div>
@@ -85,7 +87,9 @@ const UserOrderDetails = ({active}) => {
       </div>
 
       {/* order items */}
+     
       <br />
+      <hr />
       <br />
       {data &&
         data?.cart.map((item, index) => {
@@ -96,12 +100,15 @@ const UserOrderDetails = ({active}) => {
               alt=""
               className="w-[80x] h-[80px]"
             />
+            
             <div className="w-full">
               <h5 className="pl-3 text-[20px] max-400px:text-[12px]">{item.name}</h5>
               <h5 className="pl-3 text-[20px] text-[#00000091] max-400px:text-[13px]">
                 P{item.discountPrice} x {item.qty}
               </h5>
+              <hr />
             </div>
+            
             {!item.isReviewed && data?.status === "Delivered" ?  <div
                 className="w-[150px]  border h-[50px] my-3 flex items-center shadow-md justify-center rounded-xl cursor-pointer text-orange-600 max-400px:h-[30px] 320px:h-[30px]"
                 onClick={() => setOpen(true) || setSelectedItem(item)}
@@ -111,6 +118,7 @@ const UserOrderDetails = ({active}) => {
              null
             )}
           </div>
+          
           )
          })}
 
