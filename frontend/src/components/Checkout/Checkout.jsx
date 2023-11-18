@@ -13,7 +13,7 @@ import { CgArrowDown,CgNametag } from "react-icons/cg";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsHouseFill, BsTruck } from "react-icons/bs";
 import { HiLocationMarker } from "react-icons/hi";
-import { RiCoupon3Fill } from "react-icons/ri";
+import { RiCoupon3Fill,RiCoupon2Fill } from "react-icons/ri";
 import { BiCaretDown,BiHomeAlt, BiPen } from "react-icons/bi";
 import { RxCross1 } from "react-icons/rx";
 
