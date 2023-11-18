@@ -15,8 +15,6 @@ const CheckoutPage = () => {
    
         <CheckoutSteps active={1} />
         <Checkout />
-        <br />
-        <br />
         <div className='800px:hidden'> <Footer /></div>
        
     </div>
