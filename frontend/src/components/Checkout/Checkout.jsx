@@ -48,8 +48,8 @@ const Checkout = () => {
   }, []);
 
   const paymentSubmit = () => {
-   if(address === "" || landmark === ""){
-      toast.error("Please Provide complete address!")
+   if(address === "" || landmark === "" || penname === ""){
+      toast.error("Please Provide complete Info")
    } else{
     const shippingAddress = {
       address,
