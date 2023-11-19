@@ -9,10 +9,10 @@ const PaymentPage = () => {
       <div className='w-full bg-blue-500 h-10 max-400px:hidden'></div>
      
        <CheckoutSteps active={2} />
-       <br />
+     
        <hr />
        <Payment />
-       <br />
+      
        <br />
        <div className='800px:hidden'><Footer /></div>
        
