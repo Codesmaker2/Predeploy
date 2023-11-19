@@ -249,7 +249,7 @@ const ShippingInfo = ({
     
     <div className=" w-full 800px:w-[65%] bg-white  p-5 pb-1  justify-end  ">
       
-      <h5 className="text-[18px] font-[500]"><div className="flex justify-between"><BiHomeAlt size={25}/> | Home Delivery Address</div></h5>
+      <h5 className="text-[18px] font-[500]"><div className="flex justify-between"><Link to={"/"}><BiHomeAlt color="blue" size={30}/></Link>| Home Delivery Address</div></h5>
       <br />
       <form>
         <div className="w-full flex pb-3">
