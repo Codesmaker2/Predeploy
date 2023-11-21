@@ -62,7 +62,7 @@ const Header = ({ activeHeading }) => {
         product.name.toLowerCase().includes(term.toLowerCase())
       );
     setSearchData(filteredProducts);
-    if (searchData && searchData.length === 0){
+    if (searchData && searchData.length > 0){
       setSearchData(!allProducts)
     } 
     
@@ -325,7 +325,7 @@ const Header = ({ activeHeading }) => {
                 {searchData && (
                   <div className="absolute bg-[#fff] z-10 shadow w-full left-0 p-3" >
                      <div className="flex items-center justify-end">
-                  <Link to={"/"}> <MdClose size={20} className="flex cursor-pointer"/></Link>
+                  
                    </div>
                     {searchData.map((i,index) => {
                       // const d = i.name;
