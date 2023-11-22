@@ -152,13 +152,10 @@ const ProductDetails = ({ data }) => {
                     <h5 className={"text-[12px] text-gray-500 pt-0 pb-0.5 text-shadow flex"}><h4 className="text-orange-500 flex pr-2">Colortype:</h4> {data.color}</h5>
                   </div>
                 <p className="text-[12px] text-gray-500">Details: {data.description}</p>
-                <div className="flex pt-3">
-                  <h4 className={`${styles.productDiscountPrice}`}>
+                <div className="flex pt-3 justify-end ">
+                  <h4 className={`${styles.productDiscountPrice} text-[20px]`}>
                     P{data.discountPrice}
                   </h4>
-                  <h3 className={`${styles.price}`}>
-                    {data.originalPrice ? "P" + data.originalPrice : null}
-                  </h3>
                   
                 </div>
                           
