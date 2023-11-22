@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { RxCross1, RxCross2 } from "react-icons/rx";
-import { IoBagHandle, IoSad } from "react-icons/io5";
+import { IoBagHandle} from "react-icons/io5";
 import { HiOutlineMinus, HiPlus } from "react-icons/hi";
 import styles from "../../styles/styles";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addTocart, removeFromCart } from "../../redux/actions/cart";
 import { toast } from "react-toastify";
+import { BsCartXFill } from "react-icons/bs";
+import { RiInkBottleFill, RiMedicineBottleLine } from "react-icons/ri";
 
 const Cart = ({ setOpenCart }) => {
   const { cart } = useSelector((state) => state.cart);
@@ -27,17 +29,15 @@ const Cart = ({ setOpenCart }) => {
 
   return (
     <div className="fixed !overflow-scroll top-0 left-0 w-full inset-0  bg-[#0000004b] z-10">
-      <div className="fixed top-0 right-0 h-full max-400px:w-[80%] max-500px:w-[80%] max-640px:w-[80%] max-768px:w-[80%] 800px:w-[25%] bg-white flex flex-col overflow-y-scroll justify-between shadow-sm">
+    
+      <div className="fixed top-0 right-0 h-full max-400px:w-[80%] max-500px:w-[80%] max-640px:w-[80%] max-768px:w-[80%] 800px:w-[25%] bg-white flex flex-col overflow-y-scroll justify-between shadow-sm ">
         {cart && cart.length === 0 ? (
-          <div className="w-full h-screen flex items-center justify-center">
-          
-            <h5>Cart Items is empty!</h5><IoSad size={20} className="text-gray-500 ml-1"/>
-            <RxCross2
-                size={25}
-                color="blue"
-                className="cursor-pointer"
-                onClick={() => setOpenCart(false)}
-              />
+          <div className="w-full h-screen flex items-center justify-center" onClick={() => setOpenCart(false)}>
+         <BsCartXFill size={40} color="gray" className=" animate-pulse"/>
+       
+    
+            <h5 className="text-gray-500 animate-pulse">Empty Cart!</h5>
+            
           </div>
         ) : (
           <>
@@ -98,6 +98,7 @@ const Cart = ({ setOpenCart }) => {
 const CartSingle = ({ data, quantityChangeHandler, removeFromCartHandler }) => {
   const [value, setValue] = useState(data.qty);
   const totalPrice = data.discountPrice * value;
+  
 
   const increment = (data) => {
     if (data.stock <= value) {
