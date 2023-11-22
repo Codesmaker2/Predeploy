@@ -15,7 +15,7 @@ const SuggestedProduct = ({ data }) => {
   }, [allProducts,data.category]);
 
   return (
-    <div className="800px:hidden ">
+    <div className="800px:hidden !overflow-scroll h-[60vh]">
       {data ? (
         <div className={`p-1 ${styles.section}`}>
           <h2
