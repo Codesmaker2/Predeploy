@@ -106,7 +106,7 @@ const ProductDetails = ({ data }) => {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-white !overflow-scroll h-[60vh]">
       {data ? (
         <div className={`${styles.section} w-[90%] 800px:w-[80%]`}>
           <div className="w-full py-5">
