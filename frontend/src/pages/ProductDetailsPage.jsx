@@ -30,13 +30,15 @@ const ProductDetailsPage = () => {
       <br/>
       <Header />
       <ProductDetails data={data} />
-        {
+        <div className="bg-white">
+       {
           !eventData && (
             <>
             {data && <SuggestedProduct data={data} />}
             </>
           )
         }
+       </div>
       <Footer />
     </div>
   );
