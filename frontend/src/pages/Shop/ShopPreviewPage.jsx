@@ -5,7 +5,7 @@ import ShopProfileData from "../../components/Shop/ShopProfileData";
 
 const ShopPreviewPage = () => {
   return (
-    <div className={`${styles.section} bg-white 800px:hidden`}>
+    <div className={`${styles.section} bg-white 800px:hidden !overflow-scroll h-[10vh]`}>
          <div className="w-full 800px:flex py-2 justify-between">
           <div className="800px:w-[25%] bg-white rounded-[4px] shadow-sm 800px:overflow-y-scroll 800px:h-[90vh] 800px:sticky top-10 left-0 z-10">
             <ShopInfo isOwner={false} />
