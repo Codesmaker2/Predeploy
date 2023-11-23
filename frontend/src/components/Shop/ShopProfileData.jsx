@@ -30,7 +30,7 @@ const ShopProfileData = ({ isOwner }) => {
   return (
     
     <div className="w-full ">
-       <div className="w-full h-[50px] bg-white border max-400px:rounded-full shadow sticky top-0 left-0 z-30 flex items-center justify-between ">
+       <div className="w-full h-[50px] bg-white border  shadow sticky top-0 left-0 z-30 flex items-center justify-between ">
      
        <div className="flex w-full items-center justify-between">
         <div className="w-full flex justify-between p-2">
