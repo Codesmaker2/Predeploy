@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllProductsShop } from "../../redux/actions/product";
 import { AiFillEdit } from "react-icons/ai";
 import {  BiArrowToLeft, BiLogOut } from "react-icons/bi";
+import { RxCaretLeft } from "react-icons/rx";
 
 
 
@@ -54,7 +55,7 @@ const ShopInfo = ({ isOwner }) => {
     ) : (
       <div>
       <div className="w-full p-2 ">
-        <Link to={"/"}><BiArrowToLeft size={20} className="text-blue-500  500px:hidden 800px:hidden"/></Link>
+       <Link to={"/"}><RxCaretLeft size={30} className="text-blue-500  500px:hidden 800px:hidden"/></Link>
         <div className="w-full flex item-center justify-center">
           <img
             src={`${data.avatar?.url}`}
