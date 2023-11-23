@@ -16,7 +16,8 @@ import { addTocart } from "../../redux/actions/cart";
 import { toast } from "react-toastify";
 import Ratings from "./Ratings";
 import axios from "axios";
-import { IoCloseOutline } from "react-icons/io5";
+import { MdMoreHoriz } from "react-icons/md";
+
 
 
 const ProductDetails = ({ data }) => {
@@ -111,7 +112,7 @@ const ProductDetails = ({ data }) => {
         <div className={`${styles.section} w-[90%] 800px:w-[80%]`}>
           <div className="w-full py-5">
             <div className="block w-full 800px:flex">
-              <Link to={"/"}><IoCloseOutline size={25} className=" relative top-2 left-0 cursor-pointer"/></Link>
+             <Link to={"/products"}><MdMoreHoriz size={30} className=" relative top-2 left-0 cursor-pointer"/></Link>
               <div className="w-full 800px:w-[50%] items-center justify-center">
                 <img
                   src={`${data && data.images[select]?.url}`}
