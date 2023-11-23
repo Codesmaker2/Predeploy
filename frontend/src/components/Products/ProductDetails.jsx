@@ -117,7 +117,7 @@ const ProductDetails = ({ data }) => {
                 <img
                   src={`${data && data.images[select]?.url}`}
                   alt=""
-                  className="w-[80%] max-400px:w-[60%] max-400px:ml-14 "
+                    className="relative w-[80%] max-400px:h-[110px] max-500px:h-[110px]  max-500px:w-[40%] max-400px:w-[40%] top-0 left-10 max-400px:ml-14 "
                 />
                 <div className="w-[150px] flex">
                   {data &&
