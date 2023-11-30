@@ -181,17 +181,17 @@ const Singup = () => {
 
   return (
     <div
-      className="min-h-screen bg-blue-700 flex flex-col justify-center  "
+      className="min-h-screen bg-blue-800 flex flex-col justify-center  "
       //   style={{
       //     backgroundImage: "url(https://okcredit-blog-images-prod.storage.googleapis.com/2022/01/mineralwater2.jpg)",
       // }}
     >
    
-      <div className="sm:mx-auto sm:w-full sm:max-w-md">
+      <div className="sm:mx-auto sm:w-full sm:max-w-md px-4">
         <div className="bg-blue-700 py-3 px-8 shadow shadow-white rounded-lg">
           <form className="" onSubmit={handleSubmit}>
             <h2 className="text-center text-[22px]  text-white ">
-              Register as a New User
+              Register as  New Customer
             </h2>
 
             <div className="flex items-center justify-center">
@@ -254,7 +254,7 @@ const Singup = () => {
                   onChange={(e) =>
                     setName(e.target.value.replace(/[^A-Za-z ]/g, ""))
                   }
-                  className=" h-9 appearance-none block w-full px-3 py-2 border border-gray-500  shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                  className=" h-9 appearance-none block w-full px-3 py-2 border border-gray-500 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 />
               </div>
             </div>
@@ -271,7 +271,7 @@ const Singup = () => {
                   required
                   value={gender}
                   onChange={handleGenderChange}
-                  className="h-9 w-full px-2  border border-gray-500  shadow-sm placeholder-gray-400  focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                  className="h-9 w-full px-2  border border-gray-500  shadow-sm placeholder-gray-400 rounded-md  focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 >
                   <option value="">Select Gender</option>
                   <option value="male">Male</option>
@@ -313,7 +313,7 @@ const Singup = () => {
                   onChange={(e) =>
                     setPhoneNumber(e.target.value.replace(/\D/g, ""))
                   }
-                  className="h-9 appearance-none block w-full px-3 py-2 border border-gray-500  shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                  className="h-9 appearance-none block w-full px-3 py-2 border border-gray-500 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 />
               </div>
             </div>
@@ -334,7 +334,7 @@ const Singup = () => {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="h-9 appearance-none block w-full px-3 py-2 border border-gray-500  shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                  className="h-9 appearance-none block w-full px-3 py-2 border border-gray-500 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 />
               </div>
             </div>
@@ -366,7 +366,7 @@ const Singup = () => {
                   value={password}
                   style={{ borderColor: isValid ? "initial" : "red" }}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="h-9 appearance-none block w-full px-3 py-2 border border-gray-500  shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                  className="h-9 appearance-none block w-full px-3 py-2 border border-gray-500 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 />
                 {visible ? (
                   <AiOutlineEye
@@ -406,7 +406,7 @@ const Singup = () => {
                   required
                   value={confirmpassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="h-9 appearance-none block w-full px-3 py-2 border border-gray-500  shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                  className="h-9 appearance-none block w-full px-3 py-2 border border-gray-500 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 />
               </div>
             </div>
@@ -427,7 +427,7 @@ const Singup = () => {
                   required
                   value={facebooklink}
                   onChange={(e) => setFacebooklink(e.target.value)}
-                  className="h-9 appearance-none block w-full px-3 py-2 border border-gray-500  shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                  className="h-9 appearance-none block w-full px-3 py-2 border border-gray-500 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 />
               </div>
             </div>
@@ -436,7 +436,7 @@ const Singup = () => {
               <button
                 type="submit"
                 //  disabled={!isNameValid}
-                className="group relative w-full h-[40px] flex justify-center py-2 px-4 rounded-md border border-transparent text-sm font-medium  text-blue-600 bg-white hover:bg-blue-700"
+                className="group relative w-full h-[40px] flex justify-center py-2 px-4 rounded-md border border-transparent text-sm font-medium  text-blue-600 bg-white "
               >
                 Register
               </button>
