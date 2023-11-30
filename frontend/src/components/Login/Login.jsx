@@ -43,7 +43,7 @@ const Login = () => {
 
   return (
     <div
-      className="min-h-screen max-400px:min-h-[100vh] bg-white border-blue-700 rounded-sm border-[4px] flex flex-col justify-center  bg-no-repeat background-cover"
+      className="min-h-screen max-400px:min-h-[100vh] bg-blue-700 border-blue-700 rounded-sm border-[4px] flex flex-col justify-center  bg-no-repeat background-cover"
       //   style={{
       //     backgroundImage: "url(https://okcredit-blog-images-prod.storage.googleapis.com/2022/01/mineralwater2.jpg)",
       // }}
@@ -55,8 +55,8 @@ const Login = () => {
           d="M0,192L6.5,208C13,224,26,256,39,250.7C51.9,245,65,203,78,186.7C90.8,171,104,181,117,192C129.7,203,143,213,156,218.7C168.6,224,182,224,195,213.3C207.6,203,221,181,234,165.3C246.5,149,259,139,272,122.7C285.4,107,298,85,311,74.7C324.3,64,337,64,350,53.3C363.2,43,376,21,389,53.3C402.2,85,415,171,428,186.7C441.1,203,454,149,467,128C480,107,493,117,506,117.3C518.9,117,532,107,545,112C557.8,117,571,139,584,122.7C596.8,107,610,53,623,37.3C635.7,21,649,43,662,53.3C674.6,64,688,64,701,74.7C713.5,85,726,107,739,122.7C752.4,139,765,149,778,138.7C791.4,128,804,96,817,106.7C830.3,117,843,171,856,202.7C869.2,235,882,245,895,245.3C908.1,245,921,235,934,218.7C947,203,960,181,973,197.3C985.9,213,999,267,1012,288C1024.9,309,1038,299,1051,245.3C1063.8,192,1077,96,1090,101.3C1102.7,107,1116,213,1129,250.7C1141.6,288,1155,256,1168,213.3C1180.5,171,1194,117,1206,101.3C1219.5,85,1232,107,1245,128C1258.4,149,1271,171,1284,197.3C1297.3,224,1310,256,1323,261.3C1336.2,267,1349,245,1362,218.7C1375.1,192,1388,160,1401,176C1414.1,192,1427,256,1434,288L1440,320L1440,0L1433.5,0C1427,0,1414,0,1401,0C1388.1,0,1375,0,1362,0C1349.2,0,1336,0,1323,0C1310.3,0,1297,0,1284,0C1271.4,0,1258,0,1245,0C1232.4,0,1219,0,1206,0C1193.5,0,1181,0,1168,0C1154.6,0,1142,0,1129,0C1115.7,0,1103,0,1090,0C1076.8,0,1064,0,1051,0C1037.8,0,1025,0,1012,0C998.9,0,986,0,973,0C960,0,947,0,934,0C921.1,0,908,0,895,0C882.2,0,869,0,856,0C843.2,0,830,0,817,0C804.3,0,791,0,778,0C765.4,0,752,0,739,0C726.5,0,714,0,701,0C687.6,0,675,0,662,0C648.6,0,636,0,623,0C609.7,0,597,0,584,0C570.8,0,558,0,545,0C531.9,0,519,0,506,0C493,0,480,0,467,0C454.1,0,441,0,428,0C415.1,0,402,0,389,0C376.2,0,363,0,350,0C337.3,0,324,0,311,0C298.4,0,285,0,272,0C259.5,0,246,0,234,0C220.5,0,208,0,195,0C181.6,0,169,0,156,0C142.7,0,130,0,117,0C103.8,0,91,0,78,0C64.9,0,52,0,39,0C25.9,0,13,0,6,0L0,0Z"
         ></path>
       </svg>
-      <div className=" sm:mx-auto sm:w-full sm:max-w-md max-400px:h-[70vh] px-5">
-        <div className=" bg-blue-700 py-4 px-4 shadow shadow-gray-400 sm:rounded-lg sm:px-10 max-400px:m-2 border-blue-700 border  max-500px:m-10  max-640px:m-10 max-400px:rounded-lg">
+      <div className=" sm:mx-auto sm:w-full sm:max-w-md max-400px:h-[70vh] px-4 pt-[15%]">
+        <div className=" bg-blue-700 py-4 px-4 shadow shadow-white sm:rounded-lg sm:px-10 max-400px:m-2 border-blue-700 border  max-500px:m-10  max-640px:m-10 max-400px:rounded-lg">
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="  items-center justify-center">
             <Link to={"/"}>
@@ -158,9 +158,9 @@ const Login = () => {
               </button>
             </div>
             <div className={`${styles.noramlFlex} w-full justify-center`}>
-              <h4 className="text-white text-sm">Not have any account?</h4>
+              <h4 className="text-white text-sm">Customer</h4>
               <Link to="/sign-up" className="text-blue-600 pl-2">
-                <h4 className="font-Roboto text-sm text-white">Sign Up</h4>
+                <h4 className="font-Roboto text-sm text-white">Registration</h4>
               </Link>
             </div>
           </form>
