@@ -24,7 +24,7 @@ const Hero = () => {
     nextArrow: null,
     autoplay: true,
     autoplaySpeed: 3000, // Adjust the speed (in milliseconds)
-    dots: true, // Show navigation dots
+    dots: false, // Show navigation dots
     infinite: true, // Enable infinite loop
     speed: 500, // Transition speed (in milliseconds)
     slidesToShow: 4, // Number of items to show at once
