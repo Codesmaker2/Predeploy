@@ -44,15 +44,7 @@ const ActivationPage = () => {
           <span className="font-medium text-lg text-orange-900"><span className="font-semibold">Sorry!!</span>Your Token was Expired!</span>
           <p className="text-base mt-2">Please try again to register account. Thank you!.</p>
           
-          <Link to={"/"}>
-          <button className="flex justify-center items-center bg-orange-700 hover:bg-orange-800 pl-4 pr-4 pt-1.5 pb-1.5 mt-4 rounded-md text-white font-medium">
-            <span className="mr-2">Go to App</span>
-            <svg className="w-6 h-6" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" stroke-linejoin="round" stroke-linecap="round"></path>
-            </svg>
-          </button>
-          
-          </Link>
+        
         </div>
         <div className="ml-10 text-orange-900">
           <BiSad size={40} className=""/>
@@ -75,13 +67,7 @@ const ActivationPage = () => {
           Your token automatically expired after 5 minutes or Refresh Link.
           </p>
         </div>
-        <div className="p-6 pt-0">
-         <Link to={'/login'}>
-         <button data-ripple-light="true" type="button" className="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-            Login
-          </button>
-         </Link>
-        </div>
+       
       </div>
       )}
     </div>
